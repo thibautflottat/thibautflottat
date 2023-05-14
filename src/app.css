@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    @apply bg-white text-black antialiased dark:bg-stone-900 dark:text-white;   
+}
+
+@layer base {
+    h1 {
+      @apply mt-8 text-2xl;
+    }
+  }
+
+  .all-prose {
+    @apply prose-invert prose-lg lg:prose-xl;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
