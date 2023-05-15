@@ -1,4 +1,20 @@
-# Svelte Math
+<script>
+	import SparklingHighlight from '$lib/components/molecules/SparklingHighlight.svelte';
+</script>
+
+# Thibaut Flottat
+
+PhD in theoretical physics, I am System Engineer in quantum telecom at Thales Alenia Space since July 2020. I am working on space-based quantum information and quantum cryptography.
+<SparklingHighlight color="secondary">sparkles!</SparklingHighlight>
+Before  that,  I was  Software  Engineer  and  Project  Manager  at ACRI-ST, working on Sentinel-3 mission for Earth and climate studies. I have improved and developed remote sensing algorithms based on radiative transfer models and inversion methods.
+
+Before being an Engineer, I was Assistant Researcher in the field of ultracold atoms and condensed matter theory. My research activities focused on strongly correlated systems  in atomic and  molecular gases loaded on optical lattices.  These systems are governed by extended Bose-Hubbard Hamiltonians  which  I  mainly tackled with  exact  numerical methods such as quantum Monte Carlo method and exact diagonalization.
+
+I have obtained my  PhD at  the University Côte d'Azur in 2012 and have pursue  in  postdoc  at  Ecole Polytechnique Fédérale de Lausanne,  Ecole Normale Supérieure de Lyon, and at the University of Freiburg (Humboldt Fellow) until 2018.
+
+Read more [about me](/about).
+
+## Svelte Math
 
 Svelte $\mu \alpha \theta \eta \mu \alpha$.
 

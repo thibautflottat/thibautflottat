@@ -4,17 +4,21 @@
 
 body {
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-    @apply bg-white text-black antialiased dark:bg-stone-900 dark:text-white;   
+    @apply bg-white text-black dark:bg-stone-900 dark:text-white antialiased;   
 }
 
 @layer base {
     h1 {
       @apply mt-8 text-2xl;
     }
+    a.active {
+      @apply text-zinc-50;
+    }
   }
 
   .all-prose {
     @apply prose-invert prose-lg lg:prose-xl;
+    @apply prose-a:underline prose-a:decoration-2 prose-a:underline-offset-[0.1em] hover:prose-a:underline-offset-[0.3em] hover:prose-a:drop-shadow-[0_0px_3px_rgba(16,106,224,1)] prose-a:transition-all prose-a:duration-300
   }
 
   html {

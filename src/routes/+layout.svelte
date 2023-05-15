@@ -1,9 +1,10 @@
 <script lang="ts">
   import "../app.css";
-  // import '$lib/scss/global.scss';
+  import '$lib/scss/global.scss';
   import Sidebar from "$lib/components/organisms/Sidebar.svelte";
   import PageTransition from '$lib/components/PageTransition.svelte';
   import { page } from '$app/stores';
+  
 </script>
 
 <div id="app">
