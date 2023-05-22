@@ -16,7 +16,7 @@
 	.headshot {
 		--img-url: url(https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=350&h=350&fit=crop&crop=faces);
 		flex-shrink: 0;
-		margin: 20px;
+		margin: 0 auto 20px;
 		height: calc(60px + 6vw);
 		width: calc(60px + 6vw);
 		border: calc(1px + 0.2vw) solid transparent;
