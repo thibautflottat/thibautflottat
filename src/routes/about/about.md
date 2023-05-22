@@ -1,3 +1,7 @@
+<script>
+    import CodeBlock from "$lib/components/molecules/CodeBlock.svelte";
+</script>
+
 # About
 
 I am a quantum chemical physicist and scientific programmer who enjoys solving complex scientific and mathematical problems using computers. Currently I write programs to understand how particles inside atoms and molecules interact using quantum theory.
@@ -121,6 +125,17 @@ the following will be considered dynamic:
 const a = 2, b = 3, c = 4;
 const expression = `${a}x^2+${b}x+c`;
 ```
+
+<CodeBlock lang="html" filename="+page.svelte">
+
+```html
+<Header />
+<Hero />
+<About />
+<Footer />
+```
+
+</CodeBlock>
 
 ### Reactive
 

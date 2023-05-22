@@ -21,12 +21,13 @@
         display: flex; 
         position: fixed; 
         top: 0; 
-        left: 0; 
+        // left: 0; 
         padding: 1.25rem; 
         text-align: center; 
         flex-direction: column; 
         width: 16rem; 
         height: 100%; 
+        background: var(--color--post-page-background); 
     }
     
 </style>

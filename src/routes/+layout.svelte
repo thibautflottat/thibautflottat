@@ -20,11 +20,17 @@
 </div>
 
 <style lang="scss">
+  #app {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
   main {
     margin-left: 16rem;
     padding-left: 2.5rem/* 40px */;
     padding-right: 2.5rem/* 40px */;
     padding-top: 1rem/* 16px */;
+    background-color: var(--color--page-background);
+    min-height: 100vh;
   }
   
 </style>

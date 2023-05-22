@@ -1,52 +1,44 @@
-<!-- <script>
-    // Import original full-sized image with `?run` query param.
-    import me from '$lib/assets/me.jpg?run'
-    import Img from '@zerodevx/svelte-img'
-</script>
-
-<div class="w-32 p-1 rounded-full bg-gradient-to-r from-yellow-500 to-blue-500 ml-auto mr-auto">
-<Img class="rounded-full w-32" src={me} alt="Me" />
-</div>
-
-<div class="text-xl font-bold uppercase">Thibaut Flottat</div>
-<em>Ph. D. in statistical physics</em>
-<em>Reseacher @<a href="https://simatlab.com" class="bg-gradient-to-r from-yellow-500 to-blue-500 bg-no-repeat bg-[length:100%_0.15em] bg-[0_100%] transition-all duration-300 hover:bg-[length:100%_88%]">Simatlab</a></em>
-<br /><br /><br /> -->
-
-
-
 <script>
-    // Import original full-sized image with `?run` query param.
-    import me from '$lib/assets/me.jpg'
-    // import myImage from '../static/me.jpg';
-    // import Img from '@zerodevx/svelte-img'
+	// Import original full-sized image with `?run` query param.
+	import me from '$lib/assets/me.jpg';
+	// import myImage from '../static/me.jpg';
+	// import Img from '@zerodevx/svelte-img'
 </script>
 
-<div class="avatar_container">
-<!-- <Img class="avatar_container_img" src={me} alt="Me" /> -->
+<div class="headshot">
 </div>
 
 <div class="text-xl font-bold uppercase">Thibaut Flottat</div>
 <em>Ph. D. in statistical physics</em>
-<em>Reseacher @<a href="https://simatlab.com">Simatlab</a></em>
+<em>Reseacher <a class="magical" href="https://simatlab.com">@Simatlab</a></em>
 
 <style lang="scss">
-    .avatar_container {
-        padding: 0.25rem; 
-        margin-right: auto; 
-        margin-left: auto; 
-        background-image: linear-gradient(to right, var(--tw-gradient-stops)); 
-        background-color: #F59E0B; 
-        background-color: #3B82F6; 
-        width: 8rem; 
-        height: 8rem;
-        border-radius: 9999px; 
+	.headshot {
+		--img-url: url(https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=350&h=350&fit=crop&crop=faces);
+		flex-shrink: 0;
+		margin: 20px;
+		height: calc(60px + 6vw);
+		width: calc(60px + 6vw);
+		border: calc(1px + 0.2vw) solid transparent;
+		background-origin: border-box;
+		background-clip: content-box, border-box;
+		background-size: cover;
+		box-sizing: border-box;
+		box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+		border-radius: 50%;
+		background-image: var(--img-url),
+			linear-gradient(to right, var(--color--blue), var(--color--primary));
+	}
 
-        &_img {
-            width: 8rem; 
-            border-radius: 9999px; 
-        }
-
-
-    }
+	.magical {
+		text-decoration: none;
+		background-image: linear-gradient(120deg, var(--color--blue) 0%, var(--color--primary) 100%);
+		background-repeat: no-repeat;
+		background-size: 100% 0.1em;
+		background-position: 0 95%;
+		transition: background-size 0.25s ease-in;
+		&:hover {
+			background-size: 100% 88%;
+		}
+	}
 </style>

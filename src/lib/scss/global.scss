@@ -18,8 +18,8 @@
 @import '@fontsource/ubuntu-mono';
 
 body {
-	--body-background-color: var(--color--page-background);
-	background-color: var(--body-background-color);
+	// --body-background-color: var(--color--page-background);
+	// background-color: var(--body-background-color);
 	color: var(--color--text);
 	fill: var(--color--text);
 	transition: all 0.4s ease;
@@ -34,6 +34,7 @@ body {
 
 	width: 100%;
 	overflow-x: hidden;
+	background: linear-gradient(to right, var(--color--post-page-background) 50%, var(--color--page-background) 50%); 
 }
 
 html {
