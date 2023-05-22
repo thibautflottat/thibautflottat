@@ -12,7 +12,7 @@
 >
 	<a
 		{href}
-		class="hover:text-zinc-50 transition duration-300 hover:duration-300"
+		class="hover:text-stone-900 dark:hover:text-stone-50 transition duration-300 hover:duration-300"
 		class:active={$page.url.pathname === href}
 	>	
 		<span>{text}</span>

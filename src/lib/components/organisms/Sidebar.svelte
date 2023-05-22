@@ -4,7 +4,9 @@
     import Foot from "../molecules/Foot.svelte";
 </script>
 
-<aside class="fixed flex flex-col top-0 left-0 p-5 my-auto text-center bg-stone-200 dark:bg-stone-800 h-full w-64">
+<!-- <aside class="fixed flex flex-col top-0 left-0 p-5 my-auto text-center bg-stone-300 dark:bg-stone-800 h-full w-64"> -->
+
+<aside> 
 
 <Head />
 
@@ -13,3 +15,18 @@
 <Foot />
 
 </aside>
+
+<style lang="scss">
+    aside {
+        display: flex; 
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        padding: 1.25rem; 
+        text-align: center; 
+        flex-direction: column; 
+        width: 16rem; 
+        height: 100%; 
+    }
+    
+</style>

@@ -5,6 +5,7 @@
 	viewBox="0 0 24 24"
 	fill="none"
 	xmlns="http://www.w3.org/2000/svg"
+	class="hover:text-yellow-500 transition-colors duration-300 hover:drop-shadow-[0_0px_3px_rgba(234,179,8,1)]"
 >
 	<path
 		d="M7 9L12 12.5L17 9"

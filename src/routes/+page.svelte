@@ -5,6 +5,6 @@
 
 <!-- <Head title={`About`} /> -->
 
-<div class="all-prose">
+<div id="page-content">
 <svelte:component this={copy} />
 </div>

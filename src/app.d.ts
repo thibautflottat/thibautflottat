@@ -10,3 +10,9 @@ declare global {
 }
 
 export {};
+// Squelch warnings of image imports from your assets dir
+declare module '$lib/assets/*' {
+    const meta: Object[]
+    export default meta
+  }
+declare module "*.md";

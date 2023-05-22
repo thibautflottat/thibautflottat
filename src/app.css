@@ -1,10 +1,15 @@
+@import '@fontsource/youngserif';
+@import '@fontsource/barlow';
+@import '@fontsource/ubuntu-mono';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-    @apply bg-white text-black dark:bg-stone-900 dark:text-white antialiased;   
+    @apply bg-stone-200 text-stone-900 dark:bg-stone-900 dark:text-stone-200 antialiased;  
+    font-family: Barlow, system-ui, sans-serif; 
 }
 
 @layer base {
@@ -14,11 +19,14 @@ body {
     a.active {
       @apply text-zinc-50;
     }
+    h1,h2,h3,h4,h5,h6{
+      font-family: YoungSerif, system-ui, serif;
+    }
   }
 
   .all-prose {
     @apply prose-invert prose-lg lg:prose-xl;
-    @apply prose-a:underline prose-a:decoration-2 prose-a:underline-offset-[0.1em] hover:prose-a:underline-offset-[0.3em] hover:prose-a:drop-shadow-[0_0px_3px_rgba(16,106,224,1)] prose-a:transition-all prose-a:duration-300
+    @apply prose-a:underline prose-a:decoration-yellow-500 prose-a:decoration-2 prose-a:underline-offset-[0.1em] hover:prose-a:underline-offset-[0.3em] hover:prose-a:drop-shadow-[0_0px_3px_rgba(234,179,8,1)] prose-a:transition-all prose-a:duration-300
   }
 
   html {

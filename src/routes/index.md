@@ -1,10 +1,10 @@
 <script>
-	import SparklingHighlight from '$lib/components/molecules/SparklingHighlight.svelte';
+	// import SparklingHighlight from '$lib/components/molecules/SparklingHighlight.svelte';
 </script>
 
 # Thibaut Flottat
 
-Ph. D. in statistical physics, I am a post-doctoral fellow since September 2021 at [Simatlab](https://simatlab.com). I am working on Ions Exchange Membranes (IEM) for hydrogen fuel cells and water electrolyzers applications, using molecular dynamics.<SparklingHighlight color="secondary">sparkles!</SparklingHighlight>
+Ph. D. in statistical physics, I am a post-doctoral fellow since September 2021 at [Simatlab](https://simatlab.com). I am working on Ions Exchange Membranes (IEM) for hydrogen fuel cells and water electrolyzers applications, using molecular dynamics.
 
 Before that, I was development engineer at CELAD for the CNES, working on Megha-Tropiques mission to study the water cycle in the tropical atmosphere in the context of climate change. I have improved and developed remote sensing algorithms based on radiative transfer models and inversion methods.
 

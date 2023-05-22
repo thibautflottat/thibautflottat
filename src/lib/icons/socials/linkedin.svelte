@@ -5,6 +5,7 @@
 	viewBox="0 0 24 24"
 	fill="none"
 	xmlns="http://www.w3.org/2000/svg"
+	class="hover:text-yellow-500 transition-all duration-300 hover:drop-shadow-[0_0px_3px_rgba(234,179,8,1)]"
 >
 	<path
 		d="M21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8Z"
