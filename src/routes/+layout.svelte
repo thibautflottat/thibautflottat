@@ -21,7 +21,7 @@
 
 <style lang="scss">
   #app {
-    max-width: 1080px;
+    max-width: 1224px;
     margin: 0 auto;
   }
   main {
