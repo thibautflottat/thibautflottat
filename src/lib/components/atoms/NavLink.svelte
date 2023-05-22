@@ -7,14 +7,24 @@
 
 
 <li
-	class="nav__item"
+	class="nav_item"
 	class:open={$isMenuOpen}
 >
 	<a
 		{href}
-		class="hover:text-stone-900 dark:hover:text-stone-50 transition duration-300 hover:duration-300"
 		class:active={$page.url.pathname === href}
 	>	
 		<span>{text}</span>
 	</a>	
 </li>
+
+<style lang="scss">
+	li {
+
+		a {
+			text-decoration: none;
+
+		}
+	}
+
+</style>
