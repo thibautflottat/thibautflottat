@@ -15,7 +15,7 @@ I have obtained my Ph. D. at the University Nice-Sophia Antipolis in the field o
 <br />
 <center>
 <Sparkles>
-	<Button href="https://github.com/matfantinel/sveltekit-static-blog-template">
+	<Button href="/about">
 		<InfoIcon slot="icon" />
 		Read more about me.
 	</Button>
