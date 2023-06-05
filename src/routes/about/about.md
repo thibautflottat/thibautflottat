@@ -7,7 +7,29 @@
 I am a computational physicist in classical and quantum physical chemistry, who enjoys solving complex scientific and mathematical problems using computers. I am mostly working with molecular simulation and am always keen to learn new techniques, methods and informatic languages.
 Currently I write programs to understand structure/properties of Ions Exchange Membranes at the molecular scale.
 
-## Areas of experience:  
+## Areas of experience:
+
+### Quantum phase transition in strongly correlated systems
+
+You can find my Ph. D. thesis, *Bosons coupled to spin-$1/2$ in lattices* [here](https://simatlab.com).
+
+- **Bosonic Kondo-Hubbard model**
+
+- **Rabi-Hubbard model**
+
+- **Bose-Hubbard model with long-range interaction**
+
+## Interests of research
+
+- Polymers physics
+- Membrane physics
+- Multiscale numerical simulation
+- Ultracold gases
+- Condensed matter theory
+- Many-body physics
+
+
+
 
 <!-- ## Svelte Math
 
