@@ -6,6 +6,7 @@
 </script>
 
 <div class="headshot">
+	<img src="me.jpg" alt="me" />
 </div>
 
 <div class="text-xl font-bold uppercase">Thibaut Flottat</div>
@@ -14,20 +15,25 @@
 
 <style lang="scss">
 	.headshot {
-		--img-url: url(https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=350&h=350&fit=crop&crop=faces);
+		// --img-url: url(https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=350&h=350&fit=crop&crop=faces);
 		flex-shrink: 0;
 		margin: 0 auto 20px;
 		height: calc(60px + 6vw);
 		width: calc(60px + 6vw);
-		border: calc(1px + 0.2vw) solid transparent;
+		// border: calc(1px + 0.2vw) solid transparent;
 		background-origin: border-box;
 		background-clip: content-box, border-box;
 		background-size: cover;
 		box-sizing: border-box;
 		box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
 		border-radius: 50%;
-		background-image: var(--img-url),
+		background-image: 
 			linear-gradient(to right, var(--color--blue), var(--color--primary));
+
+			img {
+				border-radius: 50%;
+				padding:5px;
+			}
 	}
 
 	.magical {

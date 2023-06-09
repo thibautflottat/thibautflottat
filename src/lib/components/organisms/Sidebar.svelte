@@ -21,7 +21,7 @@
         display: flex; 
         position: fixed; 
         top: 0; 
-        // left: 0; 
+        left: calc(27.5% - 16rem); 
         padding: 1.25rem; 
         text-align: center; 
         flex-direction: column; 
