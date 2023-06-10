@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { theme } from '$lib/stores/theme';
+	import { isMenuOpen } from '$lib/stores/menu'
 
 	function toggleTheme() {
 		if ($theme === 'auto') {
@@ -26,6 +27,7 @@
 	title="Toggle between light and dark theme"
 	data-theme={$theme}
 	on:click={toggleTheme}
+	class:open={$isMenuOpen}
 >
 	<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
 		<mask id="moon">

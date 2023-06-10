@@ -34,7 +34,13 @@ body {
 
 	width: 100%;
 	overflow-x: hidden;
-	background: linear-gradient(to right, var(--color--post-page-background) 27.5%, var(--color--page-background) 27.5%); 
+	
+	@include menu-down {
+		background: var(--color--page-background); 
+	}
+	@include menu-up {
+		background: linear-gradient(to right, var(--color--post-page-background) 27.5%, var(--color--page-background) 27.5%); 
+	}
 }
 
 html {
