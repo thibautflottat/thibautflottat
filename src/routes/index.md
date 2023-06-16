@@ -15,8 +15,9 @@ I have obtained my Ph. D. at the University Nice-Sophia Antipolis in the field o
 <br />
 <center>
 <Sparkles>
-	<Button href="/about">
+	<Button>
 		<InfoIcon slot="icon" />
+		<!-- <a href="/about">Read more about me.</a> -->
 		Read more about me.
 	</Button>
 </Sparkles>
