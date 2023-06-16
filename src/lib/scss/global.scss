@@ -39,7 +39,7 @@ body {
 		background: var(--color--page-background); 
 	}
 	@include menu-up {
-		background: linear-gradient(to right, var(--color--post-page-background) 27.5%, var(--color--page-background) 27.5%); 
+		background: linear-gradient(to right, var(--color--post-page-background) 20rem, var(--color--page-background) 20rem); 
 	}
 }
 
@@ -53,3 +53,10 @@ html {
 	height: 100%;
 	position: relative;
 }
+
+// #tsparticles {
+// 	canvas {
+// 		width:20rem !important;
+// 		height: 100vh !important;
+// 	}
+// }

@@ -16,3 +16,4 @@ declare module '$lib/assets/*' {
     export default meta
   }
 declare module "*.md";
+declare module "particles.js";

@@ -46,7 +46,7 @@
     min-height: 100vh;
 
     @include menu-up {
-      margin-left: 27.5%;
+      margin-left: 20rem;
     }
     @include menu-down {
       margin-left: 0%;

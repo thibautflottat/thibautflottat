@@ -1,9 +1,4 @@
-<script>
-	// Import original full-sized image with `?run` query param.
-	import me from '$lib/assets/me.jpg';
-	// import myImage from '../static/me.jpg';
-	// import Img from '@zerodevx/svelte-img'
-</script>
+<div class="head">
 
 <div class="headshot">
 	<img src="me.jpg" alt="me" />
@@ -13,10 +8,17 @@
 <em>Ph. D. in statistical physics</em>
 <em>Reseacher <a class="magical" href="https://simatlab.com">@Simatlab</a></em>
 
+</div>
+
 <style lang="scss">
+
+	.head {
+		z-index: 2;
+	
 	.headshot {
 		// --img-url: url(https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=350&h=350&fit=crop&crop=faces);
 		flex-shrink: 0;
+		
 		margin: 0 auto 20px;
 		height: calc(60px + 6vw);
 		width: calc(60px + 6vw);
@@ -46,5 +48,5 @@
 		&:hover {
 			background-size: 100% 88%;
 		}
-	}
+	}}
 </style>

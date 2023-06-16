@@ -2,7 +2,7 @@
 	import NavLink from "../atoms/NavLink.svelte";
 </script>
 
-<nav class="grow pt-8">
+<nav>
 	<ul>
 		<NavLink href="/" text="Home" />
 		<NavLink href="/about" text="About" />
@@ -15,6 +15,7 @@
 	nav {
 		flex-grow: 1;
 		padding-top: 2rem; 
+		z-index: 2;
 
 		ul {
 		display: flex; 

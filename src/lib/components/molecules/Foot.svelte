@@ -5,6 +5,7 @@
 	import ThemeToggle from '$lib/components/molecules/ThemeToggle.svelte';
 </script>
 
+<div class="foot">
 <div class="socials">
 	<a
 		href="https://github.com/thibautflottat"
@@ -33,9 +34,14 @@
 	//
 	<ThemeToggle />
 </div>
+</div>
 
 <style lang="scss">
-	.socials {
+
+	.foot {
+		z-index: 2;
+
+		.socials {
 		display: flex;
 		align-items: center;
 		gap: 20px;
@@ -53,4 +59,6 @@
 			}
 		}
 	}	
+	}
+
 </style>
