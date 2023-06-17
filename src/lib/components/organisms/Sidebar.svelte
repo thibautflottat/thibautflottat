@@ -3,65 +3,66 @@
     import Navigation from "../molecules/Navigation.svelte";
     import Foot from "../molecules/Foot.svelte";
     import HamburgerButton from "../atoms/HamburgerButton.svelte";
-    import { isMenuOpen } from '$lib/stores/menu'
-    import { onMount } from "svelte";
-    import { loadFull } from "tsparticles";
-	import { theme } from '$lib/stores/theme';
+    import { isMenuOpen } from '$lib/stores/menu';
+	import Particles from "../molecules/Particles.svelte";
+    // import { onMount } from "svelte";
+    // import { loadFull } from "tsparticles";
+	// import { theme } from '$lib/stores/theme';
 
-    let ParticlesComponent;
+    // let ParticlesComponent;
 
-	let particlesColor: string
-	if ($theme === 'auto') {
-		particlesColor = 'dada';
-	} else if ($theme === 'light') {
-		particlesColor = '#5d5f65';
-	} else {
-		particlesColor = '#9eb4b5';
-	}
+	// let particlesColor: string
+	// if ($theme === 'auto') {
+	// 	particlesColor = 'dada';
+	// } else if ($theme === 'light') {
+	// 	particlesColor = '#5d5f65';
+	// } else {
+	// 	particlesColor = '#9eb4b5';
+	// }
 	
 
-    onMount(async () => {
-        const module = await import("svelte-particles");
+    // onMount(async () => {
+    //     const module = await import("svelte-particles");
 
-        ParticlesComponent = module.default;
-    });
+    //     ParticlesComponent = module.default;
+    // });
 
 
-    let particlesConfig = {
-		fullScreen: {
-				enable: false,
-				zIndex: 0,
-  			},
-        particles: {
-            color: {
-                value: particlesColor,
-            },
-            links: {
-                enable: true,
-                color: particlesColor,
-            },
-            move: {
-                enable: true,
-            },
-            number: {
-                value: 100,
-            },
-        },
-    };
+    // let particlesConfig = {
+	// 	fullScreen: {
+	// 			enable: false,
+	// 			zIndex: 0,
+  	// 		},
+    //     particles: {
+    //         color: {
+    //             value: particlesColor,
+    //         },
+    //         links: {
+    //             enable: true,
+    //             color: particlesColor,
+    //         },
+    //         move: {
+    //             enable: true,
+    //         },
+    //         number: {
+    //             value: 100,
+    //         },
+    //     },
+    // };
 
-    let onParticlesLoaded = event => {
-        const particlesContainer = event.detail.particles;
+    // let onParticlesLoaded = event => {
+    //     const particlesContainer = event.detail.particles;
 
-        // you can use particlesContainer to call all the Container class
-        // (from the core library) methods like play, pause, refresh, start, stop
-    };
+    //     // you can use particlesContainer to call all the Container class
+    //     // (from the core library) methods like play, pause, refresh, start, stop
+    // };
 
-    let particlesInit = async main => {
-        // you can use main to customize the tsParticles instance adding presets or custom shapes
-        // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-        // starting from v2 you can add only the features you need reducing the bundle size
-        await loadFull(main);
-    };
+    // let particlesInit = async main => {
+    //     // you can use main to customize the tsParticles instance adding presets or custom shapes
+    //     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    //     // starting from v2 you can add only the features you need reducing the bundle size
+    //     await loadFull(main);
+    // };
 </script>
 
 <!-- <aside class="fixed flex flex-col top-0 left-0 p-5 my-auto text-center bg-stone-300 dark:bg-stone-800 h-full w-64"> -->
@@ -85,17 +86,7 @@ class:open={$isMenuOpen}
 <Foot />
 <!-- </nav> -->
 
-<!-- <div id="tsparticles-container">
-	<svelte:component
-		this="{ParticlesComponent}"
-		id="tsparticles"
-		class="foo bar"
-		style="width:100%; height:100vh;"
-		options="{particlesConfig}"
-		on:particlesLoaded="{onParticlesLoaded}"
-		particlesInit="{particlesInit}"
-	/>
-</div> -->
+<Particles />
 
 </aside>
 
