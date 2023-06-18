@@ -6,37 +6,56 @@
 
     let ParticlesComponent;
 	let particlesConfig;
+    let isMobile = false;
 
     onMount(async () => {
         const module = await import("svelte-particles");
 
         ParticlesComponent = module.default;
+
     });
 
 	theme.subscribe(value => {
 
-		particlesConfig = {
-		fullScreen: {
-				enable: false,
-				zIndex: 0,
-  			},
-        particles: {
-            color: {
-                value: value === "dark" ? "#5d5f65" : "#9eb4b5",
+        particlesConfig = {
+
+            fullScreen: {
+                    enable: false,
+                    zIndex: 0,
+                },
+
+            particles: {
+                color: {
+                    value: value === "dark" ? "#5d5f65" : "#9eb4b5",
+                },
+                links: {
+                    enable: true,
+                    color: value === "dark" ? "#5d5f65" : "#9eb4b5",
+                    opacity: 0.3,
+                },
+                move: {
+                    enable: true,
+                    speed: 0.5,
+                },
+                number: {
+                    value: 100,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                        }
+                },
+                opacity: {
+                    value: 0.5,
+                    random: false,
+                    anim: {
+                        enable: false,
+                        speed: 0.5,
+                        opacity_min: 0.1,
+                        sync: false
+                        }
+                },
             },
-            links: {
-                enable: true,
-                color: value === "dark" ? "#5d5f65" : "#9eb4b5",
-            },
-            move: {
-                enable: true,
-                speed: 0.5,
-            },
-            number: {
-                value: 50,
-            },
-        },
-    };
+        };
 
 	});
 

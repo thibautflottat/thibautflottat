@@ -3,6 +3,21 @@
 	import LinkedInIcon from '$lib/icons/socials/linkedin.svelte';
 	import EmailIcon from '$lib/icons/socials/email.svelte';
 	import ThemeToggle from '$lib/components/molecules/ThemeToggle.svelte';
+
+	import { onMount } from "svelte";
+
+let showToggle = false;
+
+onMount(() => {
+  const handleResize = () => {
+	showToggle = window.innerWidth <= 1125; // Adjust the breakpoint as needed
+  };
+
+  handleResize(); // Initial check
+
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+});
 </script>
 
 <div class="foot">
@@ -31,8 +46,10 @@
 	>
 		<EmailIcon />
 	</a>
+	{#if !showToggle}
 	//
 	<ThemeToggle />
+	{/if}
 </div>
 </div>
 

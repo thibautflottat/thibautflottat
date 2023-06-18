@@ -3,8 +3,27 @@
 
 	let readableMenuStateOpposite: string
 	$: readableMenuStateOpposite = $isMenuOpen ? 'Close' : 'Open'
+
+	import ThemeToggle from '$lib/components/molecules/ThemeToggle.svelte';
+
+import { onMount } from "svelte";
+
+let showToggle = false;
+
+onMount(() => {
+const handleResize = () => {
+showToggle = window.innerWidth >= 1125; // Adjust the breakpoint as needed
+};
+
+handleResize(); // Initial check
+
+window.addEventListener("resize", handleResize);
+return () => window.removeEventListener("resize", handleResize);
+});
+
 </script>
 
+<div class="mobile_menu">
 
 <button
 	id="hamburger"
@@ -19,9 +38,24 @@
 	<div class="line line-bottom" aria-hidden="true" />
 </button>
 
+{#if !showToggle}
+<ThemeToggle />
+{/if}
+
+</div>
 
 <style lang="scss">
     @import '$lib/scss/_breakpoints.scss';
+
+	.mobile_menu {
+		position: relative;
+		display: flex;
+		left: calc(100% - 10rem);
+		top:1rem;
+		align-items: center;
+		z-index: 11;
+        // justify-content: center;
+		}
 
 	#hamburger {
 		display: none;
@@ -31,7 +65,7 @@
 		width: 2.2rem;
 		height: 2.2rem;
 		padding: .55rem; 
-		margin-left: 2rem;
+		margin-right: 2rem;
 		background: var(--color--page-background);
 		position: relative;
 		z-index: 11;
@@ -62,7 +96,7 @@
 			display: block;
 			position: absolute;
 			top: -2px;
-			left: -1.1rem;
+			right: -1.1rem;
 			transition: inherit;
 			transition-delay: 0.1s;
 		}
@@ -112,9 +146,9 @@
         
 		@include menu-down {
 			display: flex;
-            position: relative;
-            left: calc(100% - 5rem);
-            top:1rem;
+            // position: relative;
+            // left: calc(100% - 5rem);
+            // top:1rem;
 		}
 	}
 </style>

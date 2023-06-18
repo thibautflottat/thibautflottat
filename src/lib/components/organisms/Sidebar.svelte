@@ -5,6 +5,10 @@
     import HamburgerButton from "../atoms/HamburgerButton.svelte";
     import { isMenuOpen } from '$lib/stores/menu';
 	import Particles from "../molecules/Particles.svelte";
+    import { onMount } from "svelte";
+
+	let isMobile = false;
+
     // import { onMount } from "svelte";
     // import { loadFull } from "tsparticles";
 	// import { theme } from '$lib/stores/theme';
@@ -21,11 +25,12 @@
 	// }
 	
 
-    // onMount(async () => {
-    //     const module = await import("svelte-particles");
+    onMount(async () => {
+        const userAgent = navigator.userAgent.toLowerCase();
+        const mobileKeywords = ["mobile", "android", "iphone", "ipad"];
 
-    //     ParticlesComponent = module.default;
-    // });
+        isMobile = mobileKeywords.some(keyword => userAgent.includes(keyword));
+    });
 
 
     // let particlesConfig = {
@@ -85,8 +90,9 @@ class:open={$isMenuOpen}
 
 <Foot />
 <!-- </nav> -->
-
+{#if !isMobile}
 <Particles />
+{/if}
 
 </aside>
 
