@@ -1,5 +1,5 @@
-import adapter from '@sveltejs/adapter-auto';
-// import adapter from '@sveltejs/adapter-static';
+// import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-cloudflare';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 import { mdsvex } from 'mdsvex';
 import rehypeExternalLinks from 'rehype-external-links';
@@ -13,7 +13,8 @@ const extensions = ['.svelte', '.md', '.svelte.md', '.svx'];
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: adapter(),
+		// adapter: adapter(),
+		adapter: adapter({ routes: { include: ['/*'], exclude: ['<all>', '/sitemap.xml'] } }),
 		prerender: {
 			handleHttpError: 'warn'
 		}
