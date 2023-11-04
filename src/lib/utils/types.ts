@@ -13,28 +13,25 @@ export type TagType = {
   color?: 'primary' | 'secondary'
 }
 
-export type SocialLink = {
-  
-}
-
-export type Feature = {
+export type Project = {
   name: string,
   description: string,
   image: string,
+  link?: string,
+  sourceCode?: string,
+  blogPostLink?: string,
   tags: TagType[]
 }
 
-export type BlogPost = {
-  tags: string[],
-  keywords: string[],
-  hidden: boolean,
-  slug: string,
-  title: string,
-  date: string,
-  updated: string,
-  excerpt: string,
-  html: string | undefined,
-  readingTime: string,
-  relatedPosts: BlogPost[],
-  coverImage: string | undefined
+export type Image = {
+  src: string,
+  alt: string
 }
+
+export type PaginatedResponse<T> = {
+  items: T[];
+  totalItems: number;
+  totalPages: number;
+  currentPage: number;
+  currentCategory?: string;
+};

@@ -4,22 +4,22 @@
 	let readableMenuStateOpposite: string
 	$: readableMenuStateOpposite = $isMenuOpen ? 'Close' : 'Open'
 
-	import ThemeToggle from '$lib/components/molecules/ThemeToggle.svelte';
+	// import ThemeToggle from '$lib/components/molecules/ThemeToggle.svelte';
 
-import { onMount } from "svelte";
+// import { onMount } from "svelte";
 
-let showToggle = false;
+// let showToggle = false;
 
-onMount(() => {
-const handleResize = () => {
-showToggle = window.innerWidth >= 1125; // Adjust the breakpoint as needed
-};
+// onMount(() => {
+// const handleResize = () => {
+// showToggle = window.innerWidth >= 1125; // Adjust the breakpoint as needed
+// };
 
-handleResize(); // Initial check
+// handleResize(); // Initial check
 
-window.addEventListener("resize", handleResize);
-return () => window.removeEventListener("resize", handleResize);
-});
+// window.addEventListener("resize", handleResize);
+// return () => window.removeEventListener("resize", handleResize);
+// });
 
 </script>
 
@@ -37,10 +37,10 @@ return () => window.removeEventListener("resize", handleResize);
 	<div class="line line-middle" aria-hidden="true" />
 	<div class="line line-bottom" aria-hidden="true" />
 </button>
-
+<!-- 
 {#if !showToggle}
 <ThemeToggle />
-{/if}
+{/if} -->
 
 </div>
 
@@ -48,13 +48,21 @@ return () => window.removeEventListener("resize", handleResize);
     @import '$lib/scss/_breakpoints.scss';
 
 	.mobile_menu {
-		position: relative;
+		position: fixed;
 		display: flex;
-		left: calc(100% - 10rem);
-		top:1rem;
+		left: calc(100% - 9rem);
+		top: calc(100% - 3rem);
 		align-items: center;
 		z-index: 11;
         // justify-content: center;
+		// @include menu-down {
+		// 	display: flex;
+		// 	left: calc(100% - 10rem);
+		// 	bottom: 1rem;
+        //     position: fixed;
+        //     // right: 0;
+		// 	// top: 90%;
+		// }
 		}
 
 	#hamburger {
@@ -146,9 +154,9 @@ return () => window.removeEventListener("resize", handleResize);
         
 		@include menu-down {
 			display: flex;
-            // position: relative;
-            // left: calc(100% - 5rem);
-            // top:1rem;
+            // position: fixed;
+            // right: 0;
+			// top: 90%;
 		}
 	}
 </style>

@@ -25,6 +25,9 @@
 		gap: 2rem; 
 		list-style-type: none;
 		margin: 10px 0 10px 0px;
+		font-family: 'Michelin';
+		font-weight: 300;
+		font-style: italic;
 		}
 	}
 </style>

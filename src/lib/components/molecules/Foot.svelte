@@ -4,20 +4,20 @@
 	import EmailIcon from '$lib/icons/socials/email.svelte';
 	import ThemeToggle from '$lib/components/molecules/ThemeToggle.svelte';
 
-	import { onMount } from "svelte";
+	// import { onMount } from "svelte";
 
-let showToggle = false;
+// let showToggle = false;
 
-onMount(() => {
-  const handleResize = () => {
-	showToggle = window.innerWidth <= 1125; // Adjust the breakpoint as needed
-  };
+// onMount(() => {
+//   const handleResize = () => {
+// 	showToggle = window.innerWidth <= 1125; // Adjust the breakpoint as needed
+//   };
 
-  handleResize(); // Initial check
+//   handleResize(); // Initial check
 
-  window.addEventListener("resize", handleResize);
-  return () => window.removeEventListener("resize", handleResize);
-});
+//   window.addEventListener("resize", handleResize);
+//   return () => window.removeEventListener("resize", handleResize);
+// });
 </script>
 
 <div class="foot">
@@ -46,10 +46,11 @@ onMount(() => {
 	>
 		<EmailIcon />
 	</a>
-	{#if !showToggle}
+	//
+	<!-- {#if !showToggle}
 	//
 	<ThemeToggle />
-	{/if}
+	{/if} -->
 </div>
 </div>
 

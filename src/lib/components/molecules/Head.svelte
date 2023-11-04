@@ -4,16 +4,22 @@
 	<img src="me.jpg" alt="me" />
 </div>
 
-<div class="text-xl font-bold uppercase">Thibaut Flottat</div>
-<em>Ph. D. in statistical physics</em>
+<div class="headtitle">Thibaut Flottat</div>
+<em>Ph. D. in statistical physics</em><br />
 <em>Reseacher <a class="magical" href="https://simatlab.com">@Simatlab</a></em>
-
 </div>
 
 <style lang="scss">
 
 	.head {
 		z-index: 2;
+	
+	.headtitle {
+		font-weight: bold;
+		font-size: 1.25rem; /* 20px */
+		line-height: 1.75rem; /* 28px */
+		// text-transform: uppercase;
+	}
 	
 	.headshot {
 		// --img-url: url(https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=350&h=350&fit=crop&crop=faces);
@@ -39,14 +45,16 @@
 	}
 
 	.magical {
+		padding-bottom:0.15rem;
 		text-decoration: none;
 		background-image: linear-gradient(120deg, var(--color--blue) 0%, var(--color--primary) 100%);
 		background-repeat: no-repeat;
-		background-size: 100% 0.1em;
-		background-position: 0 95%;
-		transition: background-size 0.25s ease-in;
+		background-size: 100% 0.1rem;
+		background-position: 0 90%;
+		transition: background-position 0.25s ease-in;
 		&:hover {
-			background-size: 100% 88%;
+			// background-size: 100% 88%;
+			background-position: 0 100%;
 		}
 	}}
 </style>

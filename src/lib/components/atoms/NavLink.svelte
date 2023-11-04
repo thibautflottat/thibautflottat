@@ -23,7 +23,14 @@
 
 		a {
 			text-decoration: none;
+			padding: 0.5rem;
 
+		}
+
+		a:not(.button) {
+			&:hover {
+				filter: drop-shadow(0px 0px 3px var(--color--blue));
+			}
 		}
 	}
 
