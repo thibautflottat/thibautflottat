@@ -13,13 +13,8 @@ const extensions = ['.svelte', '.md', '.svelte.md', '.svx'];
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: adapter(),
-		// adapter: adapter({
-		// 	routes: {
-		// 		include: ['/*'],
-		// 		exclude: ['<all>']
-		// 	}
-		// }),
+		// adapter: adapter(),
+		adapter: adapter({ routes: { include: ['/*'], exclude: ['<all>', '/sitemap.xml'] } }),
 		prerender: {
 			handleHttpError: 'warn'
 		}
