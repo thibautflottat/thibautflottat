@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'Michelin';
+    src: url('Michelin/Michelin-SemiBold.eot');
+    src: local('Michelin SemiBold Regular'), local('Michelin-SemiBold'),
+        url('Michelin/Michelin-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Michelin/Michelin-SemiBold.woff2') format('woff2'),
+        url('Michelin/Michelin-SemiBold.woff') format('woff'),
+        url('Michelin/Michelin-SemiBold.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Michelin';
+    src: url('Michelin/Michelin-Bold.eot');
+    src: local('Michelin Bold'), local('Michelin-Bold'),
+        url('Michelin/Michelin-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Michelin/Michelin-Bold.woff2') format('woff2'),
+        url('Michelin/Michelin-Bold.woff') format('woff'),
+        url('Michelin/Michelin-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Michelin';
+    src: url('Michelin/Michelin-Light.eot');
+    src: local('Michelin Light Regular'), local('Michelin-Light'),
+        url('Michelin/Michelin-Light.eot?#iefix') format('embedded-opentype'),
+        url('Michelin/Michelin-Light.woff2') format('woff2'),
+        url('Michelin/Michelin-Light.woff') format('woff'),
+        url('Michelin/Michelin-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Michelin';
+    src: url('Michelin/Michelin-Black.eot');
+    src: local('Michelin Black Regular'), local('Michelin-Black'),
+        url('Michelin/Michelin-Black.eot?#iefix') format('embedded-opentype'),
+        url('Michelin/Michelin-Black.woff2') format('woff2'),
+        url('Michelin/Michelin-Black.woff') format('woff'),
+        url('Michelin/Michelin-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Michelin';
+    src: url('Michelin/Michelin-Regular.eot');
+    src: local('Michelin Regular'), local('Michelin-Regular'),
+        url('Michelin/Michelin-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Michelin/Michelin-Regular.woff2') format('woff2'),
+        url('Michelin/Michelin-Regular.woff') format('woff'),
+        url('Michelin/Michelin-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}

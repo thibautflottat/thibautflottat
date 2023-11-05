@@ -10,7 +10,7 @@
 @import '$lib/scss/_code-highlights.scss';
 @import '$lib/scss/animations.scss';
 
-@import './font.css';
+// @import './font.css';
 @import '@fontsource/inter';
 @import '@fontsource/inter/600.css';
 @import '@fontsource/inter/700.css';
@@ -36,12 +36,13 @@ body {
 
 	width: 100%;
 	overflow-x: hidden;
-	
+
 	@include menu-down {
-		background: var(--color--page-background); 
+		background: var(--color--page-background);
 	}
+
 	@include menu-up {
-		background: linear-gradient(to right, var(--color--post-page-background) 20rem, var(--color--page-background) 20rem); 
+		background: linear-gradient(to right, var(--color--post-page-background) 20rem, var(--color--page-background) 20rem);
 	}
 }
 

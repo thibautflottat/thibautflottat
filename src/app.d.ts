@@ -10,10 +10,11 @@ declare global {
 }
 
 export {};
-// Squelch warnings of image imports from your assets dir
-declare module '$lib/assets/*' {
-    const meta: Object[]
-    export default meta
-  }
 declare module "*.md";
 declare module "particles.js";
+
+// Squelch warnings of image imports from your assets dir
+// declare module '$lib/assets/*' {
+//     var meta
+//     export default meta
+//   }
