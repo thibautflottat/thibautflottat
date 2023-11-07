@@ -12,7 +12,6 @@
 
 	import ThemeToggle from '$lib/components/molecules/ThemeToggle.svelte';
 
-
 	// Add smooth-scrolling to the entire website
 	let root: HTMLElement;
 	onMount(async () => {
@@ -105,6 +104,10 @@
 		padding: 2.5rem /* 40px */;
 		padding-top: 1rem /* 16px */;
 		min-height: 100vh;
+
+		@include for-phone-only {
+			padding: 1.5rem;
+		}
 
 		@include menu-up {
 			margin-left: 20rem;
