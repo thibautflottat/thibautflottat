@@ -1,16 +1,16 @@
 <script lang="ts">
 	import BlogPostCard from '$lib/components/molecules/BlogPostCard.svelte';
 	import ContentSection from '$lib/components/organisms/ContentSection.svelte';
-	import type { BlogPost } from '$lib/utils/types';
 	import Button from '$lib/components/atoms/Button.svelte';
+	import type BlogPost from '$lib/data/blog-posts/model';
 
 	export let posts: BlogPost[];
 </script>
 
 <ContentSection
 	id="recent-posts"
-	title="Blog posts"
-	description="This section shows the 4 most recent blog posts. Check them out for tips on how to get started!"
+	title="Latest posts"
+	description="Every now and then I write about something I'm interested about."
 	align="left"
 >
 	<div slot="button">
@@ -23,6 +23,7 @@
 				title={post.title}
 				excerpt={post.excerpt}
 				tags={post.tags}
+				categories={post.categories.slice(0, 2)}
 				readingTime={post.readingTime}
 				showImage={false}
 			/>

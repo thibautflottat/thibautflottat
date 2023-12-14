@@ -13,7 +13,7 @@ export const keywords = [
 ];
 
 export const description =
-	"Ph. D. in statistical physics, I am a researcher in computational physical chemistry.";
+	'Ph. D. in statistical physics, I am a researcher in computational physical chemistry.';
 
 export const title = 'Thibaut Flottat';
 

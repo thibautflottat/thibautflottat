@@ -1,26 +1,25 @@
 <script>
-	import FeaturesIcon from '$lib/icons/features.svelte';
-	import GitHubIcon from '$lib/icons/socials/github.svelte';
+	import ProjectsIcon from '$lib/icons/projects.svelte';
+	import BlogIcon from '$lib/icons/blog.svelte';
+	import UserIcon from '$lib/icons/user.svelte';
+	import ExperienceIcon from '$lib/icons/experience.svelte';
 	import Button from '$lib/components/atoms/Button.svelte';
-	import Sparkles from '../atoms/Sparkles.svelte';
 </script>
 
 <section id="hero">
-	<h1 class="hello">This is a SvelteKit Static Blog Template!</h1>
+	<h2 class="hello">Hello, I'm Thibaut!</h2>
 	<p class="intro">
-		<span class="left">It supports Markdown,</span>
-		<span class="right">and is really fast.</span>
+		I am a computational physicist in classical and quantum physical chemistry, who enjoys solving
+		complex scientific and mathematical problems using computers.
 	</p>
 	<div class="ctas">
-		<Sparkles>
-			<Button href="https://github.com/matfantinel/sveltekit-static-blog-template">
-				<GitHubIcon slot="icon" />
-				Source Code
-			</Button>
-		</Sparkles>
-		<Button color="primary" href="https://histoire-sveltekit-static-blog-template.vercel.app/">
-			<FeaturesIcon slot="icon" />
-			Components
+		<Button ref="user-btn" style="understated" href="/about">
+			<UserIcon slot="icon" />
+			About
+		</Button>
+		<Button ref="resume-btn" href="/">
+			<BlogIcon slot="icon" />
+			Resume
 		</Button>
 	</div>
 </section>
@@ -35,7 +34,7 @@
 		align-items: center;
 		gap: 15px;
 		position: relative;
-		padding: 80px 0;
+		padding: 0px 0;
 
 		@include for-phone-only {
 			padding: 40px 0 50px;
@@ -48,7 +47,7 @@
 		.intro {
 			font-weight: 500;
 			font-size: 1.4rem;
-			width: min(100%, 440px);
+			width: min(100%, 500px);
 			display: flex;
 			flex-direction: column;
 
@@ -71,6 +70,19 @@
 			justify-content: center;
 			gap: 10px;
 			width: 100%;
+
+			@include for-phone-only {
+				display: none;
+			}
 		}
+	}
+
+	:global([ref='user-btn']) {
+		order: 1;
+		flex: 0 0 180px;
+	}
+	:global([ref='resume-btn']) {
+		order: 2;
+		flex: 0 0 180px;
 	}
 </style>

@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { theme } from '$lib/stores/theme';
-	import { isMenuOpen } from '$lib/stores/menu'
 
 	function toggleTheme() {
 		if ($theme === 'auto') {
@@ -13,8 +12,7 @@
 	}
 </script>
 
-<noscript>
-	<!-- Hide the theme toggle if JavaScript is disabled -->
+<noscript style="display: none;">
 	<style>
 		.theme-toggle {
 			display: none !important;
@@ -23,11 +21,10 @@
 </noscript>
 
 <button
-	class="theme-toggle"
+	class="{$$props.class} theme-toggle desktop_only"
 	title="Toggle between light and dark theme"
 	data-theme={$theme}
 	on:click={toggleTheme}
-	class:open={$isMenuOpen}
 >
 	<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
 		<mask id="moon">
@@ -51,6 +48,20 @@
 </button>
 
 <style lang="scss">
+	@import '$lib/scss/_breakpoints.scss';
+	.desktop_only {
+		display: none;
+		@include menu-up {
+			display: flex;
+		}
+	}
+	.mobile_only {
+		display: none;
+		@include menu-down {
+			display: flex;
+		}
+	}
+
 	.theme-toggle {
 		height: 24px;
 		padding: 0;
@@ -58,7 +69,7 @@
 		border: none;
 		background: none;
 		cursor: pointer;
-		display: flex;
+		// display: flex;
 		align-items: center;
 		gap: 5px;
 
@@ -112,7 +123,9 @@
 		stroke: var(--color--text);
 		stroke-width: 2px;
 		transform-origin: center center;
-		transition: all 0.5s var(--ease-elastic-4), opacity var(--_opacity-dur) var(--ease-3);
+		transition:
+			all 0.5s var(--ease-elastic-4),
+			opacity var(--_opacity-dur) var(--ease-3);
 	}
 
 	#moon > circle {

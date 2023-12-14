@@ -9,7 +9,7 @@
 
 <div class="socials">
 	<a
-		href="#"
+		href="https://t.me/Matt_Fantinel"
 		target="_blank"
 		rel="noopener noreferrer"
 		title="Say Hi on Telegram"
@@ -17,7 +17,7 @@
 		<TelegramIcon />
 	</a>
 	<a
-		href="#"
+		href="https://hachyderm.io/@fantinel"
 		target="_blank"
 		rel="me noreferrer"
 		title="Say Hi on Mastodon"
@@ -25,7 +25,7 @@
 		<MastodonIcon />
 	</a>
 	<a
-		href="#"
+		href="https://github.com/MatFantinel"
 		target="_blank"
 		rel="noopener noreferrer"
 		title="See my GitHub profile"
@@ -33,7 +33,7 @@
 		<GitHubIcon />
 	</a>
 	<a
-		href="#"
+		href="https://www.linkedin.com/in/matheus-fantinel/"
 		target="_blank"
 		rel="noopener noreferrer"
 		title="Connect on LinkedIn"
@@ -41,16 +41,17 @@
 		<LinkedInIcon />
 	</a>
 	<a
-		href="#"
+		href="mailto:matt@fantinel.dev"
 		target="_blank"
 		rel="noopener noreferrer"
-		title="Send an email"
+		title="Send an email to matt@fantinel.dev"
 	>
 		<EmailIcon />
 	</a>
 </div>
 
 <style lang="scss">
+	@import '../../scss/breakpoints.scss';
 	.socials {
 		display: flex;
 		align-items: center;

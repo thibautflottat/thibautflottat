@@ -2,23 +2,26 @@
 	import Card from '$lib/components/atoms/Card.svelte';
 	import Tag from '$lib/components/atoms/Tag.svelte';
 	import type { TagType } from '$lib/utils/types';
-	import Image from '../atoms/Image.svelte';
+	import TintHighlight from './TintHighlight.svelte';
 
-	export let name: string;
+	export let companySlug: string | undefined = undefined;
+	export let company: string;
+	export let jobTitle: string;
+	export let timeframe: string;
 	export let description: string;
-	export let image: string;
 	export let tags: TagType[] | undefined;
 </script>
 
-<Card additionalClass="feature-card">
-	<div class="image" slot="image">
-		<Image src={image} alt="Picture describing the {name} feature" />
-	</div>
+<Card>
 	<div class="content" slot="content">
-		<div class="title">
-			<span>{name}</span>
-		</div>
-		<p>{description}</p>
+		<p class="title">
+			<TintHighlight color={companySlug}>{company}</TintHighlight>
+		</p>
+		<p>{jobTitle}</p>
+		<p class="note">{timeframe}</p>
+		<p class="text">
+			{description}
+		</p>
 	</div>
 	<div class="footer" slot="footer">
 		{#if tags && tags.length > 0}
@@ -35,7 +38,7 @@
 	.content {
 		display: flex;
 		flex-direction: column;
-		gap: 10px;
+		gap: 0px;
 		align-items: flex-start;
 	}
 
@@ -57,11 +60,18 @@
 		flex-wrap: wrap;
 	}
 
-	.footer {
-		margin-top: 20px;
+	.note {
+		font-size: 0.8rem;
+		color: rgba(var(--color--text-rgb), 0.8);
 	}
 
-	:global(.feature-card .image img) {
-		object-fit: cover;
+	.text {
+		margin-top: 5px;
+		font-size: 0.9rem;
+		text-align: justify;
+	}
+
+	.footer {
+		margin-top: 20px;
 	}
 </style>

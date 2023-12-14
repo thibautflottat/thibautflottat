@@ -11,7 +11,7 @@
 		{#if title || description}
 			<div class="text">
 				{#if title}
-					<h2>
+					<h2 class="toc-exclude">
 						{title}
 					</h2>
 				{/if}
@@ -42,6 +42,8 @@
 		justify-content: space-between;
 		gap: 40px;
 		padding: 50px 0;
+		position: relative;
+		z-index: 1;
 
 		.title-area {
 			flex: 2;
@@ -66,6 +68,7 @@
 
 			display: grid;
 			place-items: center;
+			width: 100%;
 		}
 
 		@include for-tablet-landscape-up {

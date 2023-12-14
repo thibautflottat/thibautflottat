@@ -65,9 +65,9 @@
 </svelte:head>
 
 <div id="app">
-	<div class="test">
+	<!-- <div class="test">
 		<ThemeToggle />
-	</div>
+	</div> -->
 
 	<Sidebar />
 
@@ -114,6 +114,12 @@
 		}
 		@include menu-down {
 			margin-left: 0%;
+		}
+
+		:global(a) {
+			&:hover {
+				filter: drop-shadow(0px 0px 3px var(--color--primary));
+			}
 		}
 	}
 </style>

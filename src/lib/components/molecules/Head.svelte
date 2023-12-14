@@ -1,12 +1,11 @@
 <script>
 	// Import original full-sized image with `?as=run` query param
-	import me from '$lib/assets/me.jpg?as=run';
-	import Img from '@zerodevx/svelte-img';
+	import me from '$lib/assets/me.jpg?enhanced';
 </script>
 
 <div class="head">
 	<div class="headshot">
-		<Img src={me} alt="Me" />
+		<enhanced:img src={me} alt="Me" />
 	</div>
 
 	<div class="headtitle">Thibaut Flottat</div>
@@ -19,8 +18,11 @@
 		z-index: 2;
 
 		.headtitle {
-			font-weight: bold;
-			font-size: 1.25rem; /* 20px */
+			font-family: 'Michelin';
+			font-weight: 400;
+			font-style: italic;
+			// font-weight: bold;
+			font-size: 1.15rem; /* 20px */
 			line-height: 1.75rem; /* 28px */
 			// text-transform: uppercase;
 		}

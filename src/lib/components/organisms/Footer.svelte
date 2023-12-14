@@ -1,69 +1,98 @@
 <script>
-	import FooterWave from '$lib/icons/footer-wave.svelte';
-	import Socials from '$lib/components/molecules/Socials.svelte';
+	import Logo from '$lib/components/atoms/Logo.svelte';
 	import ThemeToggle from '$lib/components/molecules/ThemeToggle.svelte';
 	import RssLink from '$lib/components/atoms/RssLink.svelte';
+	import HamburgerMenu from '$lib/components/molecules/HamburgerMenu.svelte';
+
+	export let animated = false;
+	export let showBackground = false;
+	export let showFullLogo = true;
 </script>
 
-<footer>
-	<div class="wave">
-		<FooterWave />
-	</div>
-	<div class="content">
-		<div class="copyright">
-			This template was built by <a
-				href="https://fantinel.dev?utm_source=site-template"
-				target="_blank"
-				rel="noopener noreferrer">Matheus Fantinel</a
-			>.
-		</div>
-		<div class="credits">
-			Powered by <a href="https://kit.svelte.dev/" target="_blank" rel="noopener noreferrer"
-				>SvelteKit</a
-			>. Icons by
-			<a href="https://iconoir.com/" target="_blank" rel="noopener noreferrer">Iconoir</a>.
-		</div>
-		<div class="socials">
-			<Socials />
+<header class:has-background={showBackground} style="view-transition-name: header">
+	<nav class="container">
+		<a class="logo" href="/" aria-label="Site logo">
+			<Logo {animated} {showFullLogo} />
+		</a>
+		<div class="links">
+			<div class="menu-wrapper">
+				<HamburgerMenu
+					links={[
+						{ href: '/blog', text: 'Blog' },
+						// { href: '/about', text: 'About' },
+						{ href: '/resume', text: 'Resume' }
+					]}
+				/>
+			</div>
 			<RssLink />
 			<ThemeToggle />
 		</div>
-	</div>
-</footer>
+	</nav>
+</header>
 
 <style lang="scss">
-	footer {
-		height: 340px;
-		width: 100%;
-		background: linear-gradient(60deg, var(--color--waves-start) 0%, var(--color--waves-end) 100%);
-		display: grid;
-		grid-template-rows: 120px 1fr;
+	@import '$lib/scss/breakpoints.scss';
 
-		.content {
+	header {
+		position: relative;
+		z-index: 9;
+		padding: 30px 0;
+
+		@include for-phone-only {
+			padding: 20px 0;
+		}
+
+		&.has-background {
+			background: linear-gradient(
+				60deg,
+				var(--color--waves-start) 0%,
+				var(--color--waves-end) 100%
+			);
+		}
+
+		.container {
 			display: flex;
-			flex-direction: column;
 			align-items: center;
-			justify-content: center;
-			gap: 15px;
-			font-weight: 600;
-			text-align: center;
+			justify-content: space-between;
+			gap: 30px;
 
-			.credits {
-				font-weight: 400;
-				font-size: 90%;
-				color: var(--color--text-shade);
-			}
-
-			.socials {
-				display: flex;
-				align-items: center;
+			@include for-phone-only {
 				gap: 20px;
 			}
 		}
 
+		.logo {
+			height: 44px;
+
+			@include for-phone-only {
+				height: unset;
+				width: 60px;
+			}
+		}
+
 		a {
-			&:hover {
-				filter: drop-shadow(0px 0px 3px var(--color--primary));
+			color: var(--color--text);
+		}
+
+		.links {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			gap: 30px;
+
+			a {
+				text-decoration: none;
+
+				&:hover {
+					color: var(--color--primary);
+					filter: drop-shadow(0px 0px 3px var(--color--primary));
+				}
+			}
+
+			@include for-phone-only {
+				.menu-wrapper {
+					order: 2;
+				}
 			}
 		}
 	}

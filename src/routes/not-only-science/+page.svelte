@@ -1,10 +1,15 @@
-<script lang="ts">  
-  export let data
-  let { copy } = data
+<script lang="ts">
 </script>
 
-<!-- <Head title={`About`} /> -->
+<h2>Not only science</h2>
+<p></p>
 
-<div id="page-content">
-  <svelte:component this={copy} />
-</div>
+<style lang="scss">
+	h2 {
+		text-align: center;
+		padding: 2rem 0;
+	}
+	p {
+		line-height: 1.6;
+	}
+</style>

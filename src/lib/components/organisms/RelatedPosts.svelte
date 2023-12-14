@@ -1,7 +1,8 @@
 <script lang="ts">
-	import type { BlogPost } from '$lib/utils/types';
 	import BlogPostCard from '$lib/components/molecules/BlogPostCard.svelte';
 	import ContentSection from '$lib/components/organisms/ContentSection.svelte';
+	import type BlogPost from '$lib/data/blog-posts/model';
+	import Button from '../atoms/Button.svelte';
 
 	export let posts: BlogPost[];
 </script>
@@ -9,7 +10,11 @@
 <ContentSection
 	id="related-posts"
 	title="Related Posts"
+	description="Have some time? Feel free to read some other posts by me."
 >
+	<div slot="button">
+		<Button href="/blog" additionalClass="plausible-event-name=Related+Post+Click">View all</Button>
+	</div>
 	<div class="simple-grid">
 		{#each posts as post}
 			<BlogPostCard
@@ -17,8 +22,11 @@
 				title={post.title}
 				excerpt={post.excerpt}
 				tags={post.tags}
+				categories={post.categories}
 				readingTime={post.readingTime}
 				showImage={false}
+				additionalClass="plausible-event-name=Related+Post+Click"
+				hasTransition={false}
 			/>
 		{/each}
 	</div>

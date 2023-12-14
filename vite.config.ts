@@ -1,10 +1,10 @@
 import { sveltekit } from '@sveltejs/kit/vite';
-import { imagetools } from '@zerodevx/svelte-img/vite';
+import { enhancedImages } from '@sveltejs/enhanced-img';
 import path from 'path';
 
 /** @type {import('vite').UserConfig} */
 const config = {
-	plugins: [sveltekit(), imagetools()],
+	plugins: [sveltekit(), enhancedImages()],
 	resolve: {
 		alias: {
 			$routes: path.resolve('./src/routes')
