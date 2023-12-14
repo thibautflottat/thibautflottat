@@ -5,7 +5,11 @@
 
 <div class="head">
 	<div class="headshot">
-		<enhanced:img src={me} alt="Me" />
+		<enhanced:img
+			src={me}
+			alt="Me"
+			sizes="(min-width:1920px) 400px, (min-width:1080px) 200px, (min-width:768px) 100px"
+		/>
 	</div>
 
 	<div class="headtitle">Thibaut Flottat</div>
