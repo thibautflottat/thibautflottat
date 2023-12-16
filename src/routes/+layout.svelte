@@ -72,6 +72,10 @@
 	<Sidebar />
 
 	<main>
+		<!-- <div class="background-blurrer" /> -->
+		<!-- <div class="blob one" /> -->
+		<!-- <div class="blob two" /> -->
+		<!-- <div class="blob three" /> -->
 		<PageTransition refresh={$page.url.pathname}>
 			<slot />
 		</PageTransition>
@@ -84,26 +88,15 @@
 	#app {
 		//
 		margin: 0 auto;
-
-		.test {
-			@include menu-down {
-				right: 0;
-				width: auto;
-				padding-left: 0;
-			}
-			position: fixed;
-			z-index: 100;
-			bottom: 0;
-			padding: 1.25rem;
-			padding-left: 10.5rem;
-			width: 20rem;
-		}
 	}
 	main {
 		max-width: 1224px;
 		padding: 2.5rem /* 40px */;
 		padding-top: 1rem /* 16px */;
 		min-height: 100vh;
+		position: relative;
+		// overflow-x: clip;
+		// overflow-y: hidden;
 
 		@include for-phone-only {
 			padding: 1.5rem;
@@ -119,6 +112,50 @@
 		:global(a) {
 			&:hover {
 				filter: drop-shadow(0px 0px 3px var(--color--primary));
+			}
+		}
+
+		.background-blurrer {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background: rgba(var(--color--page-background-rgb), 0.7);
+			z-index: -1;
+			-webkit-backdrop-filter: blur(100px);
+			backdrop-filter: blur(100px);
+		}
+		.blob {
+			position: absolute;
+			animation: float 2s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+			animation-fill-mode: both;
+			background: var(--color--primary-shade);
+			z-index: -2;
+			--size: 400px;
+			height: var(--size);
+			width: var(--size);
+
+			&.one {
+				border-radius: var(--radius-blob-1);
+				top: max(600px, calc(15% - var(--size)));
+				left: 10%;
+				animation-duration: 10s;
+			}
+			&.two {
+				background: var(--color--secondary);
+				border-radius: var(--radius-blob-2);
+				--size: 420px;
+				top: max(600px, calc(45% - var(--size)));
+				left: 70%;
+				animation-duration: 10s;
+			}
+			&.three {
+				border-radius: var(--radius-blob-3);
+				--size: 440px;
+				top: max(700px, calc(75% - var(--size)));
+				left: -10%;
+				animation-duration: 10s;
 			}
 		}
 	}

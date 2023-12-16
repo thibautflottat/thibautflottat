@@ -8,7 +8,7 @@
 		<enhanced:img
 			src={me}
 			alt="Me"
-			sizes="(min-width:1920px) 400px, (min-width:1080px) 200px, (min-width:768px) 100px"
+			sizes="(min-width:1920px) 200px, (min-width:1080px) 200px, (min-width:768px) 100px"
 		/>
 	</div>
 
@@ -47,7 +47,7 @@
 			box-sizing: border-box;
 			box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
 			border-radius: 50%;
-			background-image: linear-gradient(to right, var(--color--blue), var(--color--primary));
+			background-image: linear-gradient(to right, var(--color--primary), var(--color--secondary));
 
 			:global(img) {
 				border-radius: 50%;
@@ -59,7 +59,11 @@
 		.magical {
 			padding-bottom: 0.15rem;
 			text-decoration: none;
-			background-image: linear-gradient(120deg, var(--color--blue) 0%, var(--color--primary) 100%);
+			background-image: linear-gradient(
+				120deg,
+				var(--color--primary) 0%,
+				var(--color--secondary) 100%
+			);
 			background-repeat: no-repeat;
 			background-size: 100% 0.1rem;
 			background-position: 0 90%;

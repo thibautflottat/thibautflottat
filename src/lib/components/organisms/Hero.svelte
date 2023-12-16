@@ -9,9 +9,13 @@
 <section id="hero">
 	<h2 class="hello">Hello, I'm Thibaut!</h2>
 	<p class="intro">
+		<span class="left">I try to understand soft matter using</span>
+		<span class="right">quantum and molecular mechanics.</span>
+	</p>
+	<!-- <p class="intro">
 		I am a computational physicist in classical and quantum physical chemistry, who enjoys solving
 		complex scientific and mathematical problems using computers.
-	</p>
+	</p> -->
 	<div class="ctas">
 		<Button ref="user-btn" style="understated" href="/about">
 			<UserIcon slot="icon" />
@@ -59,7 +63,7 @@
 			}
 
 			@include for-phone-only {
-				display: none;
+				display: block;
 			}
 		}
 

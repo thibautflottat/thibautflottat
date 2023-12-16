@@ -5,6 +5,7 @@
 	// import ContentWithImage from '$lib/components/organisms/ContentWithImage.svelte';
 	// import Experience from '$lib/components/organisms/Experience.svelte';
 	import Hero from '$lib/components/organisms/Hero.svelte';
+	import peg from '$lib/assets/peg.png?enhanced';
 	// import Projects from '$lib/components/organisms/Projects.svelte';
 	// import RecentPosts from '$lib/components/organisms/RecentPosts.svelte';
 	// import type BlogPost from '$lib/data/blog-posts/model';
@@ -25,6 +26,12 @@
 
 <div id="page-content">
 	<Hero />
+
+	<enhanced:img
+		src={peg}
+		alt="Me"
+		sizes="(min-width:1920px) 800px, (min-width:1080px) 400px, (min-width:768px) 200px"
+	/>
 </div>
 
 <style lang="scss">

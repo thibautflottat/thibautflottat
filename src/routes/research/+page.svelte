@@ -8,9 +8,9 @@
 <h3>Interests of research</h3>
 <ul>
 	<li>Polymers physics</li>
-	<li>Soft matter theory</li>
+	<li>Soft matter</li>
 	<li>Many-body physics</li>
-	<li>Membrane physics</li>
+	<li>Membranes</li>
 </ul>
 <h3>Areas of experience</h3>
 <p>
