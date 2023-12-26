@@ -1,17 +1,14 @@
 <script>
-	import ProjectsIcon from '$lib/icons/projects.svelte';
 	import BlogIcon from '$lib/icons/blog.svelte';
 	import UserIcon from '$lib/icons/user.svelte';
-	import ExperienceIcon from '$lib/icons/experience.svelte';
 	import Button from '$lib/components/atoms/Button.svelte';
-	import { math } from 'mathlifier';
 </script>
 
 <section id="hero">
 	<h2 class="hello">Hello, I'm Thibaut!</h2>
 	<p class="intro">
 		<span class="left">I try to understand soft matter</span>
-		<span class="right">using {@html math('in\\text{ - }silico')} methods.</span>
+		<span class="right">using <span class="_my-katex">in-silico</span> methods.</span>
 	</p>
 	<!-- <p class="intro">
 		I am a computational physicist in classical and quantum physical chemistry, who enjoys solving
