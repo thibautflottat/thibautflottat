@@ -7,7 +7,7 @@
 
 <h2>About</h2>
 <p>
-	Ph. D. in theoritical physics, I am a research engineer at <a
+	Ph. D. in theoretical physics, I am a Research Engineer at <a
 		href="https://michelin.com"
 		title="Michelin"
 		target="_blank">Michelin</a
