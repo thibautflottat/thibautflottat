@@ -14,7 +14,10 @@
 
 	<div class="headtitle">Thibaut Flottat</div>
 	<em>Ph. D. in theoritical physics</em><br />
-	<em>Research engineer <a class="magical" href="https://michelin.com">@Michelin</a></em>
+	<em
+		>Research engineer <a class="magical" href="https://michelin.com" target="_blank">@Michelin</a
+		></em
+	>
 </div>
 
 <style lang="scss">
