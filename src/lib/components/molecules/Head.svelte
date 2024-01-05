@@ -13,8 +13,8 @@
 	</div>
 
 	<div class="headtitle">Thibaut Flottat</div>
-	<em>Ph. D. in statistical physics</em><br />
-	<em>Reseacher <a class="magical" href="https://simatlab.com">@Simatlab</a></em>
+	<em>Ph. D. in theoritical physics</em><br />
+	<em>Research engineer <a class="magical" href="https://michelin.com">@Michelin</a></em>
 </div>
 
 <style lang="scss">

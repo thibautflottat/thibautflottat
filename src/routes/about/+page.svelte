@@ -7,12 +7,17 @@
 
 <h2>About</h2>
 <p>
-	Ph. D. in statistical physics, I am a post-doctoral fellow since September 2021 at <a
-		href="https://simatlab.com"
-		title="SiMatLab"
-		target="_blank">SiMatLab</a
-	>. I am working on Ions Exchange Membranes (IEM) for hydrogen fuel cells and water electrolyzers
-	applications, using classical and reactive molecular dynamics.<br /><br />
+	Ph. D. in theoritical physics, I am a research engineer at <a
+		href="https://michelin.com"
+		title="Michelin"
+		target="_blank">Michelin</a
+	>. I work on understanding the physico-chemical mechanisms in materials for tires and hydrogen
+	fuel cells applications.<br /><br />
+
+	From September 2021 to September 2023, I was a post-doctoral fellow at
+	<a href="https://simatlab.com" title="SiMatLab" target="_blank">SiMatLab</a>. I am working on Ions
+	Exchange Membranes (IEM) for hydrogen fuel cells and water electrolyzers applications, using
+	classical and reactive molecular dynamics.<br /><br />
 
 	Before that, I was development engineer at CELAD for the
 	<a href="https://cnes.fr" title="CNES" target="_blank">CNES</a>, working on Megha-Tropiques
