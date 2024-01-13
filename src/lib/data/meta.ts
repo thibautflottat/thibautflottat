@@ -6,14 +6,13 @@ export const siteBaseUrl = 'https://thibautflottat.fr';
 
 export const keywords = [
 	'Thibaut Flottat',
+	'Michelin',
 	'Simatlab',
 	'Scientific research',
-	'Physical chemistry',
-	'Open Source'
+	'Physical chemistry'
 ];
 
-export const description =
-	'Ph. D. in statistical physics, I am a researcher in computational physical chemistry.';
+export const description = 'Ph. D. in physics, Research Engineer @Michelin.';
 
 export const title = 'Thibaut Flottat';
 

@@ -7,7 +7,7 @@
 <section id="hero">
 	<h2 class="hello">Hello, I'm Thibaut!</h2>
 	<p class="intro">
-		<span class="left">I try to understand soft matter</span>
+		<span class="left">Understanding soft matter</span>
 		<span class="right">using <span class="_my-katex">in-silico</span> methods.</span>
 	</p>
 	<!-- <p class="intro">
